@@ -9,6 +9,7 @@ public class Flashcards1 {
 		input = stdin.nextLine();
 		System.out.println(input);
 		stdin.close();
+		System.out.println("qruoqusfadjljfdlasjlfasjfldas");
 	}
 
 }
