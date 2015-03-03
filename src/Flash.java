@@ -18,7 +18,7 @@ public class Flash {
 			definitions[n] = JOptionPane.showInputDialog("Please enter the definition for word" + t + ".");
 			n++;
 			t++;
-			words[n] = JOptionPane.showInputDialog("Please enter word " + t + "or type quit to finish.");
+			words[n] = JOptionPane.showInputDialog("Please enter word " + t + " or type quit to finish.");
 		}
 	
 		if (t == n){
