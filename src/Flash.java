@@ -1,8 +1,4 @@
 import javax.swing.*;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Arrays.*;
 public class Flash {
 
 	public static void main(String[] args) {
@@ -31,31 +27,38 @@ public class Flash {
 		}
 	
 		guess = JOptionPane.showInputDialog("Please enter the word for \"" + definitions[rand] +"\".");
+		
 		while (!guess.equals(words[rand])) {
 			guess = JOptionPane.showInputDialog("Incorrect. Please try again or type \"quit\". \n Definition: " + definitions[rand] + " .");
 			if (guess.equals(Sentinel)) {
 				break;
 			}
 		}
+		
 		while (guess.equals(words[rand])) {
 			JOptionPane.showMessageDialog(null, "Correct!");
 			rand = (int) (Math.random() * 100);
+			
 			while (rand >= num_definitions) {
 				rand = (int) (Math.random() * 100);
 			}
+			
 			guess = JOptionPane.showInputDialog("Please enter the word for \"" + definitions[rand] + "\" or type \"quit\" to exit.");
+			
 			if (guess.equals(Sentinel)) {
 				break;
 			}
+			
 			while (!guess.equals(words[rand])) {
-				guess = JOptionPane.showInputDialog("Incorrect. Please try again or type \"quit\". \n Definition: " + definitions[rand] + " .");
+				
+			guess = JOptionPane.showInputDialog("Incorrect. Please try again or type \"quit\". \n Definition: " + definitions[rand] + " .");
+				
 				if (guess.equals(Sentinel)) {
 					break;
 				}
 			}	
 		}
-		JOptionPane.showMessageDialog(null, "Good luck studying!");
-		
+		JOptionPane.showMessageDialog(null, "Good luck studying!");	
 	}
 }
 
